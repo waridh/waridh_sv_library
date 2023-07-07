@@ -43,3 +43,16 @@ always_ff @(posedge clk)
     q <= n1; // Non-blocking
   end
 endmodule
+
+module latch(
+  input logic clk,
+  input logic [3:0] d,
+  output logic [3:0] q
+);
+
+// This is an implementation of a latch. It is a little ill advised to use it
+// in desing
+
+always_latch // equivalent to always @(clk, d). Always latch gen warning
+if (clk) q <= d;
+endmodule
