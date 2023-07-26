@@ -17,6 +17,6 @@ always_comb begin
   14: y = 1;
   default: y = 0;
   endcase
-end
+end // always_comb
 
-endmodule
+endmodule // xor4
